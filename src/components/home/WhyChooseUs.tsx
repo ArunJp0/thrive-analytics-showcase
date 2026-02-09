@@ -34,12 +34,12 @@ const WhyChooseUs = () => (
       />
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {points.map((point) => (
-          <div key={point.title} className="text-center">
-            <div className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-              <point.icon className="h-6 w-6" />
+          <div key={point.title} className="rounded-xl border border-border bg-card p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div className="mx-auto mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <point.icon className="h-7 w-7" />
             </div>
-            <h3 className="mb-2 text-base font-semibold text-foreground">{point.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{point.description}</p>
+            <h3 className="mb-3 text-lg font-bold text-foreground">{point.title}</h3>
+            <p className="text-muted-foreground leading-relaxed">{point.description}</p>
           </div>
         ))}
       </div>
