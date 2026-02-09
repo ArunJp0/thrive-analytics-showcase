@@ -17,10 +17,10 @@ const HowItWorks = () => (
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((s, i) => (
-          <div key={s.step} className="relative rounded-xl border border-border bg-card p-6">
-            <span className="text-4xl font-bold text-primary/15">{s.step}</span>
-            <h3 className="mt-2 text-lg font-semibold text-card-foreground">{s.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
+          <div key={s.step} className="relative rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <span className="text-5xl font-black text-primary/10">{s.step}</span>
+            <h3 className="mt-3 text-lg font-bold text-card-foreground">{s.title}</h3>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{s.description}</p>
             {i < steps.length - 1 && (
               <div className="absolute -right-3 top-1/2 hidden h-0.5 w-6 bg-border lg:block" />
             )}

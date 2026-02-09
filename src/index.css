@@ -7,34 +7,34 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 30% 15%;
+    --foreground: 210 29% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 210 29% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 210 29% 13%;
 
-    --primary: 217 91% 50%;
+    --primary: 207 100% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 25% 96%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 29% 13%;
 
-    --muted: 215 20% 96%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 210 18% 96%;
+    --muted-foreground: 210 12% 45%;
 
-    --accent: 217 91% 95%;
-    --accent-foreground: 217 91% 40%;
+    --accent: 207 60% 94%;
+    --accent-foreground: 207 100% 30%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 90%;
-    --input: 215 20% 90%;
-    --ring: 217 91% 50%;
+    --border: 210 18% 90%;
+    --input: 210 18% 88%;
+    --ring: 207 100% 35%;
 
-    --radius: 0.75rem;
+    --radius: 0.625rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -43,35 +43,35 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 207 100% 35%;
 
     /* Custom tokens */
-    --navy: 220 40% 13%;
+    --navy: 207 69% 11%;
     --navy-foreground: 0 0% 100%;
-    --surface: 215 25% 98%;
-    --primary-glow: 217 91% 60%;
+    --surface: 210 20% 97%;
+    --primary-glow: 207 100% 45%;
   }
 
   .dark {
-    --background: 220 30% 8%;
+    --background: 207 50% 6%;
     --foreground: 210 40% 98%;
-    --card: 220 30% 12%;
+    --card: 207 40% 10%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 30% 12%;
+    --popover: 207 40% 10%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
+    --primary: 207 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 217 30% 18%;
+    --secondary: 207 30% 16%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217 30% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 30% 18%;
+    --muted: 207 30% 16%;
+    --muted-foreground: 210 18% 60%;
+    --accent: 207 30% 16%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217 30% 20%;
-    --input: 217 30% 20%;
-    --ring: 213 27% 84%;
+    --border: 207 30% 18%;
+    --input: 207 30% 18%;
+    --ring: 207 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -79,11 +79,11 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-    --navy: 220 40% 8%;
+    --sidebar-ring: 207 100% 50%;
+    --navy: 207 50% 6%;
     --navy-foreground: 0 0% 100%;
-    --surface: 220 30% 12%;
-    --primary-glow: 217 91% 65%;
+    --surface: 207 40% 10%;
+    --primary-glow: 207 100% 55%;
   }
 }
 
@@ -99,36 +99,56 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
   }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  li {
+    @apply text-base;
+  }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
   }
 
   .container-narrow {
     @apply max-w-7xl mx-auto;
   }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow;
+  }
+
+  .btn-hover-glow {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .btn-hover-glow:hover {
+    @apply shadow-lg shadow-primary/25 scale-[1.02];
+  }
 }
 
 @layer utilities {
   .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
+    animation: fadeUp 0.7s ease-out forwards;
     opacity: 0;
   }
 
   .animate-fade-up-delay-1 {
-    animation: fadeUp 0.6s ease-out 0.1s forwards;
+    animation: fadeUp 0.7s ease-out 0.15s forwards;
     opacity: 0;
   }
 
   .animate-fade-up-delay-2 {
-    animation: fadeUp 0.6s ease-out 0.2s forwards;
+    animation: fadeUp 0.7s ease-out 0.3s forwards;
     opacity: 0;
   }
 
   .animate-fade-up-delay-3 {
-    animation: fadeUp 0.6s ease-out 0.3s forwards;
+    animation: fadeUp 0.7s ease-out 0.45s forwards;
     opacity: 0;
   }
 
@@ -148,7 +168,7 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -161,6 +181,6 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
   }
 }

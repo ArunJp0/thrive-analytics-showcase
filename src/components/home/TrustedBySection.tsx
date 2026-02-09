@@ -3,16 +3,16 @@ const logos = [
 ];
 
 const TrustedBySection = () => (
-  <section className="border-y border-border bg-surface py-10">
+  <section className="border-y border-border bg-background py-12">
     <div className="container-narrow px-4 sm:px-6 lg:px-8">
-      <p className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
+      <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
         Trusted by leading organisations
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+      <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
         {logos.map((name) => (
           <span
             key={name}
-            className="text-lg font-semibold text-muted-foreground/40 select-none"
+            className="text-xl font-bold text-muted-foreground/30 select-none tracking-wide"
           >
             {name}
           </span>

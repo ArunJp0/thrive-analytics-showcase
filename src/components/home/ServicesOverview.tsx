@@ -16,15 +16,15 @@ const ServicesOverview = () => (
           <Link
             key={service.title}
             to="/services"
-            className="group rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+            className="group rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1"
           >
-            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-              <service.icon className="h-6 w-6" />
+            <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-accent text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+              <service.icon className="h-7 w-7" />
             </div>
-            <h3 className="mb-2 text-lg font-semibold text-card-foreground">{service.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{service.short}</p>
-            <span className="mt-4 inline-flex items-center text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-              Learn more <ArrowRight className="ml-1 h-3 w-3" />
+            <h3 className="mb-3 text-lg font-bold text-card-foreground">{service.title}</h3>
+            <p className="text-muted-foreground leading-relaxed">{service.short}</p>
+            <span className="mt-5 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1">
+              Learn more <ArrowRight className="ml-1 h-4 w-4" />
             </span>
           </Link>
         ))}
