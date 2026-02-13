@@ -56,7 +56,7 @@ const About = () => (
             </p>
           </div>
         </ScrollReveal>
-        <StaggerContainer className="grid grid-cols-2 gap-5" staggerDelay={0.1}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5" staggerDelay={0.1}>
           {[
             { icon: Target, title: "Our Mission", text: "To make data accessible, actionable, and impactful for every organisation we partner with." },
             { icon: Eye, title: "Our Vision", text: "A world where every business decision is informed by reliable, timely, and meaningful data." },
