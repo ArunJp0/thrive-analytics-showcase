@@ -21,11 +21,11 @@ const CaseStudiesPreview = () => (
             <span className="mb-2 inline-block rounded-full bg-accent px-3 py-0.5 text-xs font-medium text-accent-foreground">
               {cs.industry}
             </span>
-            <h3 className="mb-3 text-base font-semibold text-card-foreground leading-snug">{cs.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{cs.problem}</p>
+            <h3 className="mb-3 text-lg font-semibold text-card-foreground leading-snug">{cs.title}</h3>
+            <p className="text-base text-muted-foreground leading-relaxed line-clamp-3">{cs.problem}</p>
             <ul className="mt-4 space-y-1">
               {cs.results.slice(0, 2).map((r) => (
-                <li key={r} className="text-xs font-medium text-primary">✓ {r}</li>
+                <li key={r} className="text-sm font-medium text-primary">✓ {r}</li>
               ))}
             </ul>
           </div>

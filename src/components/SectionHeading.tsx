@@ -8,7 +8,7 @@ interface SectionHeadingProps {
 const SectionHeading = ({ badge, title, description, center = true }: SectionHeadingProps) => (
   <div className={`mb-14 max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
     {badge && (
-      <span className="mb-4 inline-block rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+      <span className="animate-float mb-4 inline-block rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
         {badge}
       </span>
     )}
