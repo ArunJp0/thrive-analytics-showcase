@@ -115,7 +115,7 @@
   }
 
   .container-narrow {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-[1400px] mx-auto 2xl:max-w-[1600px];
   }
 
   .gradient-text {

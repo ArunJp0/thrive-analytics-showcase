@@ -47,7 +47,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-14 border-t border-white/10 pt-8 text-center text-xs text-white/30">
-        © {new Date().getFullYear()} Thrive Analytics Ltd. All rights reserved. Registered in England & Wales.
+        © {new Date().getFullYear()} Thrive Analytics Ltd. All rights reserved.
       </div>
     </div>
   </footer>
