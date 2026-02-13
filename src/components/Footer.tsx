@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="mb-5">
-            <img src={logoWhite} alt="Thrive Analytics" className="h-10 w-auto" />
+            <img src={logoWhite} alt="Thrive Analytics" className="h-12 w-auto" />
           </div>
           <p className="text-base text-white/50 leading-relaxed">
             Data-driven IT services for forward-thinking businesses across the United Kingdom.
