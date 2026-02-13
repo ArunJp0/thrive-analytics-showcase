@@ -40,7 +40,6 @@ const HeroSection = () => (
               alt="Professional data analytics team collaborating in a modern office"
               className="w-full max-w-lg object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
           </div>
           {/* Floating decorative elements */}
           <div className="animate-float-delay absolute -top-4 right-4 h-16 w-16 rounded-xl bg-primary/15 backdrop-blur-sm" />

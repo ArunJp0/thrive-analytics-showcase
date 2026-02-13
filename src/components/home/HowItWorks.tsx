@@ -8,8 +8,11 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section className="section-padding bg-background">
-    <div className="container-narrow">
+  <section className="relative section-padding bg-background overflow-hidden">
+    {/* Floating animated icons */}
+    <div className="animate-float absolute top-12 right-8 h-12 w-12 rounded-xl bg-primary/10 pointer-events-none" />
+    <div className="animate-float-slow absolute bottom-16 left-16 h-10 w-10 rounded-full bg-primary-glow/10 pointer-events-none" />
+    <div className="container-narrow relative z-10">
       <SectionHeading
         badge="Our Process"
         title="How We Work"

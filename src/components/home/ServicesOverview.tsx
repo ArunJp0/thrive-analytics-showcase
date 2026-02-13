@@ -4,8 +4,12 @@ import { services } from "@/data/services";
 import { ArrowRight } from "lucide-react";
 
 const ServicesOverview = () => (
-  <section className="section-padding bg-background">
-    <div className="container-narrow">
+  <section className="relative section-padding bg-background overflow-hidden">
+    {/* Floating animated icons */}
+    <div className="animate-float absolute top-20 left-8 h-12 w-12 rounded-full bg-primary/10 pointer-events-none" />
+    <div className="animate-float-delay absolute bottom-12 right-10 h-14 w-14 rounded-xl bg-primary/10 pointer-events-none" />
+    <div className="animate-float-slow absolute top-1/3 right-6 h-8 w-8 rounded-lg bg-primary-glow/10 pointer-events-none" />
+    <div className="container-narrow relative z-10">
       <SectionHeading
         badge="What We Do"
         title="Services Built for Growth"
@@ -23,7 +27,7 @@ const ServicesOverview = () => (
             </div>
             <h3 className="mb-3 text-lg font-bold text-card-foreground">{service.title}</h3>
             <p className="text-muted-foreground leading-relaxed">{service.short}</p>
-            <span className="mt-5 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1">
+            <span className="mt-5 inline-flex items-center text-sm font-semibold text-primary transition-all duration-300 group-hover:translate-x-1">
               Learn more <ArrowRight className="ml-1 h-4 w-4" />
             </span>
           </Link>

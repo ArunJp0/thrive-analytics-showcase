@@ -25,8 +25,12 @@ const points = [
 ];
 
 const WhyChooseUs = () => (
-  <section className="section-padding bg-surface">
-    <div className="container-narrow">
+  <section className="relative section-padding bg-surface overflow-hidden">
+    {/* Floating animated icons */}
+    <div className="animate-float absolute top-16 left-10 h-14 w-14 rounded-xl bg-primary/10 pointer-events-none" />
+    <div className="animate-float-delay absolute bottom-20 right-12 h-10 w-10 rounded-full bg-primary/10 pointer-events-none" />
+    <div className="animate-float-slow absolute top-1/2 right-1/4 h-8 w-8 rounded-lg bg-primary-glow/10 pointer-events-none" />
+    <div className="container-narrow relative z-10">
       <SectionHeading
         badge="Why Thrive"
         title="Built for Enterprise. Delivered with Agility."
