@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import { services } from "@/data/services";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Database, BarChart3, TrendingUp } from "lucide-react";
 
 const ServicesOverview = () => (
   <section className="relative section-padding bg-background overflow-hidden">
@@ -9,6 +9,10 @@ const ServicesOverview = () => (
     <div className="animate-float absolute top-20 left-8 h-12 w-12 rounded-full bg-primary/10 pointer-events-none" />
     <div className="animate-float-delay absolute bottom-12 right-10 h-14 w-14 rounded-xl bg-primary/10 pointer-events-none" />
     <div className="animate-float-slow absolute top-1/3 right-6 h-8 w-8 rounded-lg bg-primary-glow/10 pointer-events-none" />
+    {/* Floating content-related icons */}
+    <Database className="animate-float absolute top-28 right-20 h-6 w-6 text-primary/15 pointer-events-none" />
+    <BarChart3 className="animate-float-delay absolute bottom-24 left-16 h-7 w-7 text-primary/15 pointer-events-none" />
+    <TrendingUp className="animate-float-slow absolute top-1/2 left-12 h-5 w-5 text-primary-glow/15 pointer-events-none" />
     <div className="container-narrow relative z-10">
       <SectionHeading
         badge="What We Do"

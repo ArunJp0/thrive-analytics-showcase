@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoDark from "@/assets/logo-dark.png";
+import logoColored from "@/assets/logo-colored.png";
 
 const navItems = [
   { label: "Services", path: "/services" },
@@ -19,7 +19,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-xl">
       <div className="container-narrow flex h-[72px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logoDark} alt="Thrive Analytics" className="h-10 w-auto" />
+          <img src={logoColored} alt="Thrive Analytics" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}
