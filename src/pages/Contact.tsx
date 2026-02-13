@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -19,22 +20,24 @@ const Contact = () => {
     <Layout>
       <section className="bg-navy py-20 md:py-28">
         <div className="container-narrow px-4 sm:px-6 lg:px-8 text-center">
-          <span className="animate-float mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
-            Get in Touch
-          </span>
-          <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-navy-foreground leading-tight">
-            Let's Start a{" "}
-            <span className="gradient-text">Conversation</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 leading-relaxed">
-            Whether you have a specific project in mind or want to explore how data can drive your business forward, we'd love to hear from you.
-          </p>
+          <ScrollReveal>
+            <span className="animate-float mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
+              Get in Touch
+            </span>
+            <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-navy-foreground leading-tight">
+              Let's Start a{" "}
+              <span className="gradient-text">Conversation</span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 leading-relaxed">
+              Whether you have a specific project in mind or want to explore how data can drive your business forward, we'd love to hear from you.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="section-padding bg-background">
         <div className="container-narrow grid gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-3">
+          <ScrollReveal direction="left" className="lg:col-span-3">
             {submitted ? (
               <div className="rounded-xl border border-border bg-card p-12 text-center">
                 <h3 className="text-2xl font-bold text-card-foreground">Message Received</h3>
@@ -71,9 +74,9 @@ const Contact = () => {
                 </Button>
               </form>
             )}
-          </div>
+          </ScrollReveal>
 
-          <div className="space-y-6 lg:col-span-2">
+          <ScrollReveal direction="right" className="space-y-6 lg:col-span-2">
             <div className="rounded-xl border border-border bg-card p-8">
               <h3 className="mb-5 text-lg font-bold text-card-foreground">Contact Details</h3>
               <ul className="space-y-5 text-muted-foreground">
@@ -97,7 +100,7 @@ const Contact = () => {
               <p className="text-muted-foreground">Monday – Friday: 9:00 – 17:30 GMT</p>
               <p className="mt-2 text-muted-foreground">We aim to respond within one business day.</p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </Layout>
