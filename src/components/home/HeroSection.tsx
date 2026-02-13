@@ -34,7 +34,7 @@ const HeroSection = () => (
         </div>
 
         <div className="relative flex items-center justify-center animate-fade-up-delay-2">
-          <div className="relative rounded-2xl shadow-2xl shadow-black/30">
+          <div className="relative rounded-2xl">
             <img
               src={heroCorporate}
               alt="Professional data analytics team collaborating in a modern office"
