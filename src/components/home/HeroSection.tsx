@@ -34,11 +34,11 @@ const HeroSection = () => (
         </div>
 
         <div className="relative flex items-center justify-center animate-fade-up-delay-2">
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl shadow-black/30">
+          <div className="relative rounded-2xl shadow-2xl shadow-black/30">
             <img
               src={heroCorporate}
               alt="Professional data analytics team collaborating in a modern office"
-              className="w-full max-w-lg object-cover"
+              className="w-full max-w-lg object-contain rounded-2xl"
             />
           </div>
           {/* Floating decorative elements */}
