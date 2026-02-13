@@ -8,7 +8,7 @@ const CaseStudies = () => (
   <Layout>
     <section className="bg-navy py-20 md:py-28">
       <div className="container-narrow px-4 sm:px-6 lg:px-8 text-center">
-        <span className="mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
+        <span className="animate-float mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
           Case Studies
         </span>
         <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-navy-foreground leading-tight">

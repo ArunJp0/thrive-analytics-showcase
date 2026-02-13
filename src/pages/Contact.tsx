@@ -19,7 +19,7 @@ const Contact = () => {
     <Layout>
       <section className="bg-navy py-20 md:py-28">
         <div className="container-narrow px-4 sm:px-6 lg:px-8 text-center">
-          <span className="mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
+          <span className="animate-float mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
             Get in Touch
           </span>
           <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-navy-foreground leading-tight">
@@ -46,24 +46,24 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-foreground">First Name</label>
+                    <label className="mb-2 block text-base font-semibold text-foreground">First Name</label>
                     <Input placeholder="James" required className="h-12" />
                   </div>
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-foreground">Last Name</label>
+                    <label className="mb-2 block text-base font-semibold text-foreground">Last Name</label>
                     <Input placeholder="Robertson" required className="h-12" />
                   </div>
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-foreground">Work Email</label>
+                  <label className="mb-2 block text-base font-semibold text-foreground">Work Email</label>
                   <Input type="email" placeholder="james@company.co.uk" required className="h-12" />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-foreground">Company</label>
+                  <label className="mb-2 block text-base font-semibold text-foreground">Company</label>
                   <Input placeholder="Your company name" className="h-12" />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-foreground">How can we help?</label>
+                  <label className="mb-2 block text-base font-semibold text-foreground">How can we help?</label>
                   <Textarea placeholder="Tell us about your project or challenge..." rows={5} required />
                 </div>
                 <Button type="submit" size="lg" className="w-full sm:w-auto btn-hover-glow">
