@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
+import logoWhite from "@/assets/logo-white.png";
 
 const Footer = () => (
   <footer className="bg-navy text-navy-foreground">
     <div className="container-narrow px-4 sm:px-6 lg:px-8 py-16 md:py-20">
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5 mb-5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <span className="text-sm font-bold text-primary-foreground">T</span>
-            </div>
-            <span className="text-lg font-semibold">Thrive Analytics</span>
+          <div className="mb-5">
+            <img src={logoWhite} alt="Thrive Analytics" className="h-8 w-auto" />
           </div>
           <p className="text-sm text-white/50 leading-relaxed">
             Data-driven IT services for forward-thinking businesses across the United Kingdom.
