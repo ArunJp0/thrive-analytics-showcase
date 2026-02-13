@@ -33,22 +33,17 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center animate-fade-up-delay-2">
-          <div className="relative rounded-2xl">
-            <img
-              src={heroCorporate}
-              alt="Professional data analytics team collaborating in a modern office"
-              className="w-full max-w-lg object-contain rounded-2xl"
-            />
-          </div>
-          {/* Floating decorative elements */}
-          <div className="animate-float-delay absolute -top-4 right-4 h-16 w-16 rounded-xl bg-primary/15 backdrop-blur-sm" />
-          <div className="animate-float-slow absolute bottom-4 -left-4 h-12 w-12 rounded-full bg-primary-glow/10 backdrop-blur-sm" />
+        <div className="relative z-10 flex items-center justify-center animate-fade-up-delay-2">
+          <img
+            src={heroCorporate}
+            alt="Professional data analytics team collaborating in a modern office"
+            className="w-full max-w-lg object-contain rounded-2xl"
+          />
         </div>
       </div>
     </div>
-    {/* Background subtle gradient */}
-    <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary/10 pointer-events-none" />
+    {/* Background subtle gradient - stops before image area */}
+    <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary/10 pointer-events-none z-0" />
   </section>
 );
 
