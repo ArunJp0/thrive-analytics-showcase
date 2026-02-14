@@ -11,8 +11,6 @@ const Services = lazy(() => import("./pages/Services"));
 const About = lazy(() => import("./pages/About"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Terms = lazy(() => import("./pages/Terms"));
 
 const queryClient = new QueryClient();
 
@@ -29,8 +27,6 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

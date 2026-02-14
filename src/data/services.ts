@@ -1,4 +1,4 @@
-import { Database, BarChart3, LineChart, Code2, BrainCircuit, PieChart } from "lucide-react";
+import { Database, BarChart3, LineChart, Code2, BrainCircuit, PieChart, ArrowRightLeft, Cloud, Blocks } from "lucide-react";
 
 export const services = [
   {
@@ -42,5 +42,26 @@ export const services = [
     short: "End-to-end BI solutions that give your leadership team a real-time view of business performance.",
     description: "We implement comprehensive BI strategies that unify your data sources, establish governance frameworks, and deliver real-time reporting to decision-makers at every level of your organisation.",
     approach: "Our BI consultants audit your current reporting landscape, identify gaps, and implement a unified platform that provides a single source of truth for your entire business.",
+  },
+  {
+    icon: ArrowRightLeft,
+    title: "Data Migration",
+    short: "Seamlessly migrate your data between platforms, databases, and cloud environments with zero downtime.",
+    description: "We plan and execute complex data migrations that move your critical information safely between legacy systems, modern databases, and cloud platforms. Our structured approach ensures data integrity, minimal disruption, and full traceability throughout the process.",
+    approach: "We begin with a comprehensive audit of your source and target systems, map data schemas, run pilot migrations, validate integrity at every stage, and execute the full migration with rollback safeguards in place.",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Migration",
+    short: "Move your infrastructure and workloads to the cloud with a clear strategy and minimal business disruption.",
+    description: "We help organisations transition from on-premise infrastructure to cloud-native environments on AWS, Azure, or Google Cloud. Our migrations are planned meticulously to reduce risk, optimise costs, and unlock the scalability and resilience of modern cloud platforms.",
+    approach: "Our team conducts a readiness assessment, defines a phased migration roadmap, re-platforms or re-architects workloads as needed, and provides post-migration optimisation to ensure you get maximum value from your cloud investment.",
+  },
+  {
+    icon: Blocks,
+    title: "Modernising Architecture",
+    short: "Transform legacy systems into modern, scalable architectures that support innovation and growth.",
+    description: "We redesign and rebuild outdated technology stacks into modern, maintainable architectures using microservices, APIs, and cloud-native patterns. Our modernisation services help businesses reduce technical debt, improve performance, and accelerate delivery.",
+    approach: "We assess your current architecture, identify bottlenecks and risks, then design a target-state architecture. We execute the transformation incrementally, ensuring continuity of service while progressively modernising each component.",
   },
 ];
