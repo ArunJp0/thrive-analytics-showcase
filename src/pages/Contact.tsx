@@ -2,19 +2,34 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import { services } from "@/data/services";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
     toast.success("Thank you! We'll be in touch shortly.");
   };
+
+  const toggleService = (service: string) => {
+    setSelectedServices((prev) =>
+      prev.includes(service)
+        ? prev.filter((s) => s !== service)
+        : [...prev, service]
+    );
+  };
+
+  const serviceOptions = [...services.map((s) => s.title), "Other"];
+  const showOtherTextarea = selectedServices.includes("Other");
 
   return (
     <Layout>
@@ -65,6 +80,39 @@ const Contact = () => {
                   <label className="mb-2 block text-base font-semibold text-foreground">Company</label>
                   <Input placeholder="Your company name" className="h-12" />
                 </div>
+
+                <div>
+                  <label className="mb-3 block text-base font-semibold text-foreground">
+                    Which Service Are You Interested In?
+                  </label>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {serviceOptions.map((service) => (
+                      <div key={service} className="flex items-center gap-2.5">
+                        <Checkbox
+                          id={`service-${service}`}
+                          checked={selectedServices.includes(service)}
+                          onCheckedChange={() => toggleService(service)}
+                        />
+                        <Label
+                          htmlFor={`service-${service}`}
+                          className="cursor-pointer text-sm font-normal text-foreground"
+                        >
+                          {service}
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {showOtherTextarea && (
+                  <div className="animate-in fade-in-0 slide-in-from-top-2 duration-300">
+                    <label className="mb-2 block text-base font-semibold text-foreground">
+                      Please Describe Your Requirement
+                    </label>
+                    <Textarea placeholder="Tell us what you're looking for..." rows={4} />
+                  </div>
+                )}
+
                 <div>
                   <label className="mb-2 block text-base font-semibold text-foreground">How can we help?</label>
                   <Textarea placeholder="Tell us about your project or challenge..." rows={5} required />
@@ -83,14 +131,6 @@ const Contact = () => {
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 text-primary shrink-0" />
                   info@thriveanalytics.co.uk
-                </li>
-                <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-5 w-5 text-primary shrink-0" />
-                  +44 (0) 20 7946 0958
-                </li>
-                <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 text-primary shrink-0" />
-                  <span>71–75 Shelton Street<br />Covent Garden, London<br />WC2H 9JQ</span>
                 </li>
               </ul>
             </div>
