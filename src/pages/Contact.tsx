@@ -7,8 +7,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { services } from "@/data/services";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
+import { MultiSelect } from "@/components/ui/multi-select";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -20,13 +19,6 @@ const Contact = () => {
     toast.success("Thank you! We'll be in touch shortly.");
   };
 
-  const toggleService = (service: string) => {
-    setSelectedServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
-    );
-  };
 
   const serviceOptions = [...services.map((s) => s.title), "Other"];
   const showOtherTextarea = selectedServices.includes("Other");
@@ -82,26 +74,15 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="mb-3 block text-base font-semibold text-foreground">
+                  <label className="mb-2 block text-base font-semibold text-foreground">
                     Which Service Are You Interested In?
                   </label>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    {serviceOptions.map((service) => (
-                      <div key={service} className="flex items-center gap-2.5">
-                        <Checkbox
-                          id={`service-${service}`}
-                          checked={selectedServices.includes(service)}
-                          onCheckedChange={() => toggleService(service)}
-                        />
-                        <Label
-                          htmlFor={`service-${service}`}
-                          className="cursor-pointer text-sm font-normal text-foreground"
-                        >
-                          {service}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
+                  <MultiSelect
+                    options={serviceOptions}
+                    selected={selectedServices}
+                    onChange={setSelectedServices}
+                    placeholder="Select services..."
+                  />
                 </div>
 
                 {showOtherTextarea && (
