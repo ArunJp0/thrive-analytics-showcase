@@ -46,8 +46,6 @@ const Footer = () => {
               <h4 className="mb-5 text-xs font-semibold uppercase tracking-wider text-white/40">Contact</h4>
               <ul className="space-y-3 text-sm text-white/60">
                 <li>info@thriveanalytics.co.uk</li>
-                <li>+44 (0) 20 7946 0958</li>
-                <li>71–75 Shelton Street<br />Covent Garden, London<br />WC2H 9JQ</li>
               </ul>
             </div>
           </div>
