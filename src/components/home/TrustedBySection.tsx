@@ -90,7 +90,7 @@ const TrustedBySection = () => {
     const container = scrollRef.current;
     if (!container) return;
 
-    const speed = 0.5;
+    const speed = 0.8;
 
     const animate = () => {
       if (!isPaused && container) {
@@ -127,21 +127,17 @@ const TrustedBySection = () => {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <div ref={scrollRef} className="flex gap-6 will-change-transform">
+        <div ref={scrollRef} className="flex gap-6 will-change-transform items-stretch">
           {allClients.map((client, i) => (
             <div
               key={`${client.name}-${i}`}
-              className={`flex-shrink-0 rounded-lg border border-border bg-white shadow-sm flex flex-col items-center ${
+              className={`flex-shrink-0 rounded-lg border border-border bg-white shadow-sm flex flex-col items-center p-5 md:p-6 ${
                 client.description
-                  ? "w-[280px] sm:w-[300px] md:w-[340px] min-h-[280px] p-5 md:p-6"
-                  : "w-[180px] sm:w-[200px] md:w-[220px] min-h-[120px] p-5 md:p-6 justify-center"
+                  ? "w-[280px] sm:w-[300px] md:w-[340px] h-[280px] sm:h-[300px] md:h-[320px]"
+                  : "w-[180px] sm:w-[200px] md:w-[220px] h-[280px] sm:h-[300px] md:h-[320px] justify-center"
               }`}
             >
-              <div
-                className={`flex items-center justify-center w-full ${
-                  client.description ? "h-16 md:h-20 mb-4" : "h-16 md:h-20"
-                }`}
-              >
+              <div className="flex items-center justify-center w-full h-20 md:h-24 flex-shrink-0">
                 <img
                   src={client.src}
                   alt={client.name}
@@ -150,7 +146,7 @@ const TrustedBySection = () => {
                 />
               </div>
               {client.description && (
-                <p className="text-xs leading-relaxed text-muted-foreground text-justify mt-auto">
+                <p className="text-xs leading-relaxed text-muted-foreground text-justify mt-4 flex-1">
                   {client.description}
                 </p>
               )}
