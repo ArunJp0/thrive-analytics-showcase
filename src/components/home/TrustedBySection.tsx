@@ -58,6 +58,26 @@ const clients: ClientLogo[] = [
     name: "Go Car Credit",
     src: "/images/clients/Go_Car_Credit.svg",
   },
+  {
+    name: "Howden",
+    src: "/images/clients/Howden.svg",
+  },
+  {
+    name: "RBC_Brewin",
+    src: "/images/clients/RBC_Brewin.svg",
+  },
+  {
+    name: "DHL",
+    src: "/images/clients/DHL.svg",
+  },
+  {
+    name: "BAT",
+    src: "/images/clients/BAT.svg",
+  },
+  {
+    name: "SoftwareOne",
+    src: "/images/clients/SoftwareOne.svg",
+  },
 ];
 
 const TrustedBySection = () => {
