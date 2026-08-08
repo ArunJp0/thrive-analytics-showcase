@@ -26,37 +26,37 @@ const faqs = [
 
 const About = () => (
   <Layout>
-    <section className="bg-navy py-20 md:py-28">
-      <div className="container-narrow px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
+      <div className="container-narrow text-center">
         <ScrollReveal>
-          <span className="animate-float mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
+          <span className="eyebrow mb-5 text-white/55">
             About Us
           </span>
-          <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-navy-foreground leading-tight">
+          <h1 className="h1-display mx-auto max-w-4xl font-semibold text-navy-foreground">
             Empowering Businesses{" "}
             <span className="gradient-text">Through Data</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 leading-relaxed">
+          <p className="text-lead mx-auto mt-5 max-w-2xl text-white/65">
             Thrive Analytics Ltd is a UK-based data and technology consultancy dedicated to helping organisations harness the full value of their data.
           </p>
         </ScrollReveal>
       </div>
     </section>
 
-    <section className="section-padding bg-background">
-      <div className="container-narrow grid gap-12 lg:grid-cols-2">
+    <section className="section-padding overflow-x-clip bg-background">
+      <div className="container-narrow grid gap-10 lg:grid-cols-2 lg:gap-14">
         <ScrollReveal direction="left">
           <div>
-            <h2 className="text-2xl font-bold md:text-3xl text-foreground">Who We Are</h2>
-            <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            <h2 className="h2-section font-semibold text-foreground">Who We Are</h2>
+            <p className="text-lead mt-5 text-muted-foreground">
               Founded with the belief that every organisation can benefit from better data practices, Thrive Analytics brings together a team of experienced data engineers, analysts, scientists, and developers who are passionate about solving complex business challenges.
             </p>
-            <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lead mt-5 text-muted-foreground">
               Based in London, we work with businesses across the United Kingdom—from ambitious startups to established enterprises—delivering tailored solutions that drive efficiency, innovation, and growth.
             </p>
           </div>
         </ScrollReveal>
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5" staggerDelay={0.1}>
+        <StaggerContainer className="grid grid-cols-1 gap-5 sm:grid-cols-2" staggerDelay={0.1}>
           {[
             { icon: Target, title: "Our Mission", text: "To make data accessible, actionable, and impactful for every organisation we partner with." },
             { icon: Eye, title: "Our Vision", text: "A world where every business decision is informed by reliable, timely, and meaningful data." },
@@ -64,10 +64,10 @@ const About = () => (
             { icon: Users, title: "Our People", text: "A diverse team of 40+ specialists with deep expertise across data engineering, science, and development." },
           ].map((item) => (
             <StaggerItem key={item.title}>
-              <div className="rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <item.icon className="mb-4 h-8 w-8 text-primary" />
-                <h3 className="text-lg font-bold text-card-foreground">{item.title}</h3>
-                <p className="mt-2 text-base text-muted-foreground leading-relaxed">{item.text}</p>
+              <div className="card-pro h-full">
+                <span className="icon-tile mb-4"><item.icon aria-hidden="true" /></span>
+                <h3 className="h3-card font-semibold text-card-foreground">{item.title}</h3>
+                <p className="mt-2 text-muted-foreground">{item.text}</p>
               </div>
             </StaggerItem>
           ))}
@@ -75,7 +75,7 @@ const About = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-surface">
+    <section className="section-padding overflow-x-clip border-y border-border bg-surface">
       <div className="container-narrow">
         <ScrollReveal>
           <SectionHeading
@@ -84,15 +84,15 @@ const About = () => (
             description="We foster a culture of curiosity, continuous learning, and genuine collaboration—both within our team and with our clients."
           />
         </ScrollReveal>
-        <StaggerContainer className="grid gap-6 sm:grid-cols-3" staggerDelay={0.12}>
+        <StaggerContainer className="grid gap-5 sm:grid-cols-3 lg:gap-6" staggerDelay={0.12}>
           {[
             { title: "Collaborative Approach", text: "We embed ourselves within your teams, ensuring knowledge transfer and long-term capability building alongside immediate project delivery." },
             { title: "Continuous Innovation", text: "We invest in our team's development and stay at the forefront of data technologies, so you always benefit from the latest thinking." },
             { title: "Client-First Mindset", text: "Your success is our success. We measure our performance by the tangible business outcomes we deliver, not just the technology we implement." },
           ].map((item) => (
             <StaggerItem key={item.title}>
-              <div className="rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <h3 className="mb-3 text-lg font-bold text-card-foreground">{item.title}</h3>
+              <div className="card-pro h-full">
+                <h3 className="mb-3 h3-card font-semibold text-card-foreground">{item.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.text}</p>
               </div>
             </StaggerItem>
@@ -101,7 +101,7 @@ const About = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-background">
+    <section className="section-padding overflow-x-clip bg-background">
       <div className="container-narrow">
         <ScrollReveal>
           <SectionHeading
@@ -110,16 +110,14 @@ const About = () => (
             description="A proven, structured approach that delivers results with transparency and accountability."
           />
         </ScrollReveal>
-        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.12}>
-          {processSteps.map((s, i) => (
+        <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6" staggerDelay={0.12}>
+          {processSteps.map((s) => (
             <StaggerItem key={s.step}>
-              <div className="relative rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <span className="text-5xl font-black text-primary/10">{s.step}</span>
-                <h3 className="mt-3 text-lg font-bold text-card-foreground">{s.title}</h3>
+              <div className="relative card-pro h-full">
+                <span className="text-small font-semibold tracking-[0.16em] text-primary">{s.step}</span>
+                <div className="mt-4 h-px w-8 bg-border" />
+                <h3 className="mt-4 h3-card font-semibold text-card-foreground">{s.title}</h3>
                 <p className="mt-3 text-muted-foreground leading-relaxed">{s.description}</p>
-                {i < processSteps.length - 1 && (
-                  <div className="absolute -right-3 top-1/2 hidden h-0.5 w-6 bg-border lg:block" />
-                )}
               </div>
             </StaggerItem>
           ))}
@@ -127,7 +125,7 @@ const About = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-surface">
+    <section className="section-padding overflow-x-clip border-y border-border bg-surface">
       <div className="container-narrow">
         <ScrollReveal>
           <SectionHeading
@@ -140,7 +138,7 @@ const About = () => (
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
-                <AccordionItem value={`faq-${i}`} className="rounded-xl border border-border bg-card px-6">
+                <AccordionItem value={`faq-${i}`} className="rounded-lg border border-border bg-card px-6">
                   <AccordionTrigger className="text-base font-semibold text-card-foreground hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>

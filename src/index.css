@@ -34,7 +34,7 @@
     --input: 210 18% 88%;
     --ring: 224 100% 57%;
 
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -101,21 +101,72 @@
   }
 
   p {
-    @apply text-base leading-relaxed;
+    @apply text-[0.9375rem] leading-relaxed sm:text-base;
   }
 
   li {
-    @apply text-base;
+    @apply text-[0.9375rem] sm:text-base;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+    @apply py-16 sm:py-20 lg:py-24;
   }
 
   .container-narrow {
-    @apply max-w-[1400px] mx-auto 2xl:max-w-[1600px];
+    @apply w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-12;
+  }
+
+  /* Responsive typography scale */
+  .h1-display {
+    font-size: clamp(2.125rem, 1.35rem + 3.4vw, 3.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .h2-section {
+    font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .h3-card {
+    font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.3125rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .text-lead {
+    font-size: clamp(0.9375rem, 0.88rem + 0.3vw, 1.125rem);
+    line-height: 1.65;
+  }
+
+  .text-small {
+    font-size: clamp(0.8125rem, 0.79rem + 0.15vw, 0.9375rem);
+  }
+
+  /* Card system */
+  .card-pro {
+    @apply rounded-lg border border-border bg-card p-6 sm:p-7 transition-[border-color,box-shadow,transform] duration-300;
+  }
+
+  .card-pro:hover {
+    @apply border-primary/30 -translate-y-0.5;
+    box-shadow: 0 12px 28px -18px hsl(var(--navy) / 0.28);
+  }
+
+  /* Icon tiles: responsive so icons never dominate content */
+  .icon-tile {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent text-primary sm:h-11 sm:w-11 lg:h-12 lg:w-12;
+  }
+
+  .icon-tile svg {
+    @apply h-[22px] w-[22px] sm:h-6 sm:w-6 lg:h-7 lg:w-7;
+  }
+
+  .eyebrow {
+    @apply inline-block text-[0.6875rem] font-semibold uppercase tracking-[0.16em];
   }
 
   .gradient-text {
@@ -123,11 +174,11 @@
   }
 
   .btn-hover-glow {
-    @apply relative overflow-hidden transition-all duration-300;
+    @apply transition-shadow duration-200;
   }
 
   .btn-hover-glow:hover {
-    @apply shadow-lg shadow-primary/25 scale-[1.02];
+    box-shadow: 0 10px 24px -14px hsl(var(--primary) / 0.55);
   }
 }
 

@@ -7,17 +7,17 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/motion
 
 const CaseStudies = () => (
   <Layout>
-    <section className="bg-navy py-20 md:py-28">
-      <div className="container-narrow px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
+      <div className="container-narrow text-center">
         <ScrollReveal>
-          <span className="animate-float mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
+          <span className="eyebrow mb-5 text-white/55">
             Case Studies
           </span>
-          <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-navy-foreground leading-tight">
+          <h1 className="h1-display mx-auto max-w-4xl font-semibold text-navy-foreground">
             Real Results for{" "}
             <span className="gradient-text">Real Businesses</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60 leading-relaxed">
+          <p className="text-lead mx-auto mt-5 max-w-2xl text-white/65">
             Explore how we've helped organisations across the UK transform their data capabilities and achieve measurable business outcomes.
           </p>
         </ScrollReveal>
@@ -25,31 +25,31 @@ const CaseStudies = () => (
     </section>
 
     <section className="section-padding bg-background">
-      <StaggerContainer className="container-narrow grid gap-8 md:grid-cols-2" staggerDelay={0.15}>
+      <StaggerContainer className="container-narrow grid gap-5 md:grid-cols-2 lg:gap-6" staggerDelay={0.15}>
         {caseStudies.map((cs) => (
           <StaggerItem key={cs.id}>
-            <div className="rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:-translate-y-1">
+            <div className="card-pro h-full">
               <div className="mb-4 flex items-center gap-2">
-                <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                <span className="rounded-full bg-accent px-2.5 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-accent-foreground">
                   {cs.industry}
                 </span>
                 <span className="text-xs text-muted-foreground">{cs.service}</span>
               </div>
-              <h3 className="mb-4 text-xl font-bold text-card-foreground leading-snug">{cs.title}</h3>
+              <h3 className="h3-card mb-4 font-semibold text-card-foreground">{cs.title}</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-bold text-foreground">Challenge</h4>
+                  <h4 className="text-small font-semibold uppercase tracking-[0.12em] text-primary">Challenge</h4>
                   <p className="text-muted-foreground leading-relaxed">{cs.problem}</p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground">Solution</h4>
+                  <h4 className="text-small font-semibold uppercase tracking-[0.12em] text-primary">Solution</h4>
                   <p className="text-muted-foreground leading-relaxed">{cs.solution}</p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground">Results</h4>
+                  <h4 className="text-small font-semibold uppercase tracking-[0.12em] text-primary">Results</h4>
                   <ul className="mt-2 space-y-1.5">
                     {cs.results.map((r) => (
-                      <li key={r} className="text-sm font-semibold text-primary">✓ {r}</li>
+                      <li key={r} className="text-small font-medium text-foreground">✓ {r}</li>
                     ))}
                   </ul>
                 </div>
@@ -60,7 +60,7 @@ const CaseStudies = () => (
       </StaggerContainer>
 
       <ScrollReveal delay={0.2}>
-        <div className="container-narrow mt-14 text-center">
+        <div className="container-narrow mt-12 text-center lg:mt-14">
           <Link to="/contact">
             <Button size="lg" className="btn-hover-glow">
               Discuss Your Project <ArrowRight className="ml-2 h-4 w-4" />

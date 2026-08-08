@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 const Privacy = () => (
   <Layout>
     <section className="bg-navy py-16 md:py-20">
-      <div className="container-narrow px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <div className="container-narrow max-w-3xl">
         <h1 className="text-3xl font-bold md:text-4xl text-navy-foreground">Privacy Policy</h1>
         <p className="mt-3 text-white/50">Last updated: February 2026</p>
       </div>

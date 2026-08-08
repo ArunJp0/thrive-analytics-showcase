@@ -26,10 +26,7 @@ const points = [
 ];
 
 const WhyChooseUs = () => (
-  <section className="relative section-padding bg-surface overflow-hidden">
-    <div className="animate-float absolute top-16 left-10 h-14 w-14 rounded-xl bg-primary/10 pointer-events-none" />
-    <div className="animate-float-delay absolute bottom-20 right-12 h-10 w-10 rounded-full bg-primary/10 pointer-events-none" />
-    <div className="animate-float-slow absolute top-1/2 right-1/4 h-8 w-8 rounded-lg bg-primary-glow/10 pointer-events-none" />
+  <section className="relative section-padding bg-surface border-y border-border">
     <div className="container-narrow relative z-10">
       <ScrollReveal>
         <SectionHeading
@@ -38,15 +35,15 @@ const WhyChooseUs = () => (
           description="We combine the rigour of enterprise consultancy with the speed and flexibility of a specialist partner."
         />
       </ScrollReveal>
-      <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.1}>
+      <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6" staggerDelay={0.1}>
         {points.map((point) => (
           <StaggerItem key={point.title}>
-            <div className="rounded-xl border border-border bg-card p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="mx-auto mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <point.icon className="h-7 w-7" />
-              </div>
-              <h3 className="mb-3 text-lg font-bold text-foreground">{point.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+            <div className="card-pro h-full">
+              <span className="icon-tile mb-5">
+                <point.icon aria-hidden="true" />
+              </span>
+              <h3 className="h3-card mb-2.5 font-semibold text-foreground">{point.title}</h3>
+              <p className="text-muted-foreground">{point.description}</p>
             </div>
           </StaggerItem>
         ))}

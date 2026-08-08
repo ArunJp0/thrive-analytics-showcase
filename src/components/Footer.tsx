@@ -9,20 +9,20 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-navy text-navy-foreground">
-        <div className="container-narrow px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div className="container-narrow py-14 sm:py-16 lg:py-20">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="mb-5">
-                <img src={logoWhite} alt="Thrive Analytics" className="h-14 w-auto" />
+                <img src={logoWhite} alt="Thrive Analytics" className="h-12 w-auto lg:h-14" />
               </div>
-              <p className="text-base text-white/50 leading-relaxed">
+              <p className="text-[0.9375rem] text-white/55 leading-relaxed">
                 Data-driven IT services for forward-thinking businesses across the United Kingdom.
               </p>
             </div>
 
             <div>
-              <h4 className="mb-5 text-xs font-semibold uppercase tracking-wider text-white/40">Services</h4>
-              <ul className="space-y-3 text-sm text-white/60">
+              <h4 className="mb-5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-white/45">Services</h4>
+              <ul className="space-y-2.5 text-[0.9375rem] text-white/60">
                 <li><Link to="/services" className="hover:text-white transition-colors">Data Engineering</Link></li>
                 <li><Link to="/services" className="hover:text-white transition-colors">Data Analysis</Link></li>
                 <li><Link to="/services" className="hover:text-white transition-colors">Data Visualisation</Link></li>
@@ -32,8 +32,8 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="mb-5 text-xs font-semibold uppercase tracking-wider text-white/40">Company</h4>
-              <ul className="space-y-3 text-sm text-white/60">
+              <h4 className="mb-5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-white/45">Company</h4>
+              <ul className="space-y-2.5 text-[0.9375rem] text-white/60">
                 <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
                 <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
                 <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
@@ -43,14 +43,14 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="mb-5 text-xs font-semibold uppercase tracking-wider text-white/40">Contact</h4>
-              <ul className="space-y-3 text-sm text-white/60">
+              <h4 className="mb-5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-white/45">Contact</h4>
+              <ul className="space-y-2.5 text-[0.9375rem] text-white/60">
                 <li>info@thriveanalytics.co.uk</li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-14 border-t border-white/10 pt-8 text-center text-xs text-white/30">
+          <div className="mt-12 border-t lg:mt-14 border-white/10 pt-8 text-center text-xs text-white/30">
             © {new Date().getFullYear()} Thrive Analytics Ltd. All rights reserved.
           </div>
         </div>

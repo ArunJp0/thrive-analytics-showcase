@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/motion/ScrollReveal";
 
 const CaseStudiesPreview = () => (
-  <section className="section-padding bg-surface">
+  <section className="section-padding bg-surface border-t border-border">
     <div className="container-narrow">
       <ScrollReveal>
         <SectionHeading
@@ -15,18 +15,18 @@ const CaseStudiesPreview = () => (
           description="See how we've helped organisations transform their data capabilities and drive measurable business outcomes."
         />
       </ScrollReveal>
-      <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.12}>
+      <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" staggerDelay={0.12}>
         {caseStudies.slice(0, 3).map((cs) => (
           <StaggerItem key={cs.id}>
-            <div className="group rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
-              <span className="mb-2 inline-block rounded-full bg-accent px-3 py-0.5 text-xs font-medium text-accent-foreground">
+            <div className="card-pro group flex h-full flex-col">
+              <span className="text-small mb-3 inline-block font-semibold uppercase tracking-[0.12em] text-primary">
                 {cs.industry}
               </span>
-              <h3 className="mb-3 text-lg font-semibold text-card-foreground leading-snug">{cs.title}</h3>
-              <p className="text-base text-muted-foreground leading-relaxed line-clamp-3">{cs.problem}</p>
-              <ul className="mt-4 space-y-1">
+              <h3 className="h3-card mb-3 font-semibold text-card-foreground">{cs.title}</h3>
+              <p className="text-muted-foreground line-clamp-3">{cs.problem}</p>
+              <ul className="mt-5 space-y-1.5 border-t border-border pt-4">
                 {cs.results.slice(0, 2).map((r) => (
-                  <li key={r} className="text-sm font-medium text-primary">✓ {r}</li>
+                  <li key={r} className="text-small font-medium text-foreground">✓ {r}</li>
                 ))}
               </ul>
             </div>
@@ -34,10 +34,10 @@ const CaseStudiesPreview = () => (
         ))}
       </StaggerContainer>
       <ScrollReveal delay={0.3}>
-        <div className="mt-10 text-center">
+        <div className="mt-10 text-center sm:mt-12">
           <Link to="/case-studies">
             <Button variant="outline">
-              View All Case Studies <ArrowRight className="ml-2 h-4 w-4" />
+              View All Case Studies <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>
         </div>
