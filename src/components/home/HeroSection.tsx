@@ -5,45 +5,51 @@ import heroCorporate from "@/assets/hero-corporate.jpg";
 
 const HeroSection = () => (
   <section className="relative overflow-hidden bg-navy">
-    <div className="container-narrow px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-      <div className="grid items-center gap-12 lg:grid-cols-2">
-        <div className="relative z-10">
-          <span className="animate-fade-up mb-5 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
+    {/* Restrained background treatment */}
+    <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_28%,hsl(var(--primary)/0.18),transparent_60%)]" />
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-px bg-white/10" />
+
+    <div className="container-narrow relative z-10 py-16 sm:py-20 lg:py-28">
+      <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
+        <div className="lg:col-span-6">
+          <span className="animate-fade-up eyebrow mb-5 text-white/55">
             Data-Driven IT Services
           </span>
-          <h1 className="animate-fade-up-delay-1 text-4xl font-bold leading-[1.1] md:text-5xl lg:text-6xl text-navy-foreground">
+          <h1 className="animate-fade-up-delay-1 h1-display font-semibold text-navy-foreground">
             Turn Your Data Into a{" "}
             <span className="gradient-text">Competitive Advantage</span>
           </h1>
-          <p className="animate-fade-up-delay-2 mt-6 text-lg leading-relaxed text-white/70 max-w-lg">
+          <p className="animate-fade-up-delay-2 text-lead mt-6 max-w-xl text-white/65">
             Thrive Analytics helps UK businesses unlock the full potential of their data through expert engineering, analysis, and bespoke technology solutions.
           </p>
-          <div className="animate-fade-up-delay-3 mt-10 flex flex-wrap gap-4">
+          <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4">
             <Link to="/contact">
               <Button size="lg" className="btn-hover-glow">
                 Book a Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
             <Link to="/services">
-              <Button variant="outline" size="lg" className="border-white/30 text-white bg-white/5 hover:bg-white/15 hover:text-white btn-hover-glow">
+              <Button variant="outline" size="lg" className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
                 Explore Services
               </Button>
             </Link>
           </div>
         </div>
 
-        <div className="relative z-10 flex items-center justify-center animate-fade-up-delay-2">
-          <img
-            src={heroCorporate}
-            alt="Professional data analytics team collaborating in a modern office"
-            className="w-full max-w-lg object-contain rounded-2xl"
-          />
+        <div className="animate-fade-up-delay-2 lg:col-span-6">
+          <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
+            <img
+              src={heroCorporate}
+              alt="Professional data analytics team collaborating in a modern office"
+              className="h-auto w-full object-contain"
+              width={1024}
+              height={768}
+            />
+          </div>
         </div>
       </div>
     </div>
-    {/* Background subtle gradient - stops before image area */}
-    <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary/10 pointer-events-none z-0" />
   </section>
 );
 

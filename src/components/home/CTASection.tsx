@@ -5,32 +5,30 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const CTASection = () => (
   <section className="relative overflow-hidden bg-navy section-padding">
+    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(var(--primary)/0.22),transparent_60%)]" />
     <div className="container-narrow relative z-10 text-center">
       <ScrollReveal scale>
-        <h2 className="text-3xl font-bold text-navy-foreground md:text-5xl leading-tight">
+        <h2 className="h2-section mx-auto max-w-3xl font-semibold text-navy-foreground">
           Ready to Unlock the Power of{" "}
           <span className="gradient-text">Your Data?</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-xl text-lg text-white/60 leading-relaxed">
+        <p className="text-lead mx-auto mt-5 max-w-xl text-white/65">
           Let's discuss how Thrive Analytics can help your organisation make smarter, faster, data-driven decisions.
         </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-3 sm:mt-10 sm:gap-4">
           <Link to="/contact">
-            <Button size="lg" className="bg-white text-navy hover:bg-white/90 btn-hover-glow">
-              Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="lg" className="bg-white text-navy hover:bg-white/90">
+              Book a Free Consultation <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>
           <Link to="/services">
-            <Button size="lg" variant="outline" className="border-white/30 bg-white/10 text-white hover:bg-white/20 btn-hover-glow">
+            <Button size="lg" variant="outline" className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white">
               Explore Services
             </Button>
           </Link>
         </div>
       </ScrollReveal>
     </div>
-    <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary/15 pointer-events-none" />
-    <div className="animate-float absolute top-10 left-10 h-24 w-24 rounded-full bg-primary/5" />
-    <div className="animate-float-delay absolute bottom-10 right-16 h-16 w-16 rounded-xl bg-primary/5" />
   </section>
 );
 

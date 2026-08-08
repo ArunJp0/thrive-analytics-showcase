@@ -113,10 +113,10 @@ const TrustedBySection = () => {
   const allClients = [...clients, ...clients];
 
   return (
-    <section className="border-y border-border bg-background py-14 md:py-20 overflow-hidden">
-      <div className="container-narrow px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-border bg-background py-12 sm:py-14 lg:py-16 overflow-hidden">
+      <div className="container-narrow">
         <ScrollReveal>
-          <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <p className="mb-8 text-center text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:mb-10">
             Trusted by leading organisations
           </p>
         </ScrollReveal>
@@ -131,13 +131,13 @@ const TrustedBySection = () => {
           {allClients.map((client, i) => (
             <div
               key={`${client.name}-${i}`}
-              className={`flex-shrink-0 rounded-lg border border-border bg-white shadow-sm flex flex-col items-center p-5 md:p-6 ${
+              className={`flex-shrink-0 rounded-lg border border-border bg-card flex flex-col items-center p-5 sm:p-6 ${
                 client.description
-                  ? "w-[280px] sm:w-[300px] md:w-[340px] h-[280px] sm:h-[300px] md:h-[320px]"
-                  : "w-[180px] sm:w-[200px] md:w-[220px] h-[280px] sm:h-[300px] md:h-[320px] justify-center"
+                  ? "w-[280px] sm:w-[300px] md:w-[340px] h-[260px] sm:h-[280px] md:h-[300px]"
+                  : "w-[180px] sm:w-[200px] md:w-[220px] h-[260px] sm:h-[280px] md:h-[300px] justify-center"
               }`}
             >
-              <div className="flex items-center justify-center w-full h-20 md:h-24 flex-shrink-0">
+              <div className="flex items-center justify-center w-full h-16 sm:h-20 md:h-[88px] flex-shrink-0">
                 <img
                   src={client.src}
                   alt={client.name}
@@ -146,7 +146,7 @@ const TrustedBySection = () => {
                 />
               </div>
               {client.description && (
-                <p className="text-xs leading-relaxed text-muted-foreground text-justify mt-4 flex-1">
+                <p className="text-[0.8125rem] leading-relaxed text-muted-foreground mt-4 flex-1">
                   {client.description}
                 </p>
               )}

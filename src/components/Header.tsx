@@ -17,9 +17,9 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-xl">
-      <div className="container-narrow flex h-[72px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container-narrow flex h-[68px] lg:h-[76px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logoColored} alt="Thrive Analytics" className="h-8 sm:h-10 md:h-12 w-auto" />
+          <img src={logoColored} alt="Thrive Analytics" className="h-8 w-auto sm:h-9 lg:h-10" />
         </Link>
 
         {/* Desktop nav */}
@@ -28,7 +28,7 @@ const Header = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`rounded-md px-4 py-2 text-base font-medium transition-colors hover:text-white ${
+              className={`rounded-md px-3.5 py-2 text-[0.9375rem] font-medium transition-colors hover:text-white ${
                 location.pathname === item.path
                   ? "text-white"
                   : "text-white/60"
