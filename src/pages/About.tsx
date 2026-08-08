@@ -111,16 +111,13 @@ const About = () => (
           />
         </ScrollReveal>
         <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6" staggerDelay={0.12}>
-          {processSteps.map((s, i) => (
+          {processSteps.map((s) => (
             <StaggerItem key={s.step}>
               <div className="relative card-pro h-full">
                 <span className="text-small font-semibold tracking-[0.16em] text-primary">{s.step}</span>
                 <div className="mt-4 h-px w-8 bg-border" />
                 <h3 className="mt-4 h3-card font-semibold text-card-foreground">{s.title}</h3>
                 <p className="mt-3 text-muted-foreground leading-relaxed">{s.description}</p>
-                {i < processSteps.length - 1 && (
-                  
-                )}
               </div>
             </StaggerItem>
           ))}

@@ -51,8 +51,7 @@ const Services = () => (
             <ScrollReveal direction={i % 2 === 1 ? "left" : "right"} className={`flex items-center justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
               <div className="relative flex h-56 w-full items-center justify-center rounded-lg border border-border bg-[linear-gradient(180deg,hsl(var(--accent)/0.7),hsl(var(--surface)))] sm:h-72">
                 <service.icon className="h-20 w-20 text-primary/25 sm:h-24 sm:w-24" aria-hidden="true" />
-                
-                
+
               </div>
             </ScrollReveal>
           </div>
