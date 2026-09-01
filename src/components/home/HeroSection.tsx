@@ -22,7 +22,7 @@ const HeroSection = () => (
           <p className="animate-fade-up-delay-2 text-lead mt-6 max-w-xl text-white/65">
             Thrive Analytics helps UK businesses unlock the full potential of their data through expert engineering, analysis, and bespoke technology solutions.
           </p>
-          <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4">
+          <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start sm:mt-10 sm:gap-4">
             <Link to="/contact">
               <Button size="lg" className="btn-hover-glow">
                 Book a Consultation
@@ -37,7 +37,7 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="animate-fade-up-delay-2 lg:col-span-6">
+        <div className="animate-fade-up-delay-2 hidden md:block lg:col-span-6">
           <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
             <img
               src={heroCorporate}

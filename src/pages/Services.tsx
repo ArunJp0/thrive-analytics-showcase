@@ -42,7 +42,7 @@ const Services = () => (
                 <h4 className="text-small mb-2 font-semibold uppercase tracking-[0.12em] text-primary">Our Approach</h4>
                 <p className="text-muted-foreground leading-relaxed">{service.approach}</p>
               </div>
-              <Link to="/contact" className="mt-8 inline-block">
+              <Link to="/contact" className="mt-8 flex justify-center md:inline-flex">
                 <Button className="btn-hover-glow h-auto min-h-11 whitespace-normal py-2.5 text-left">
                   Discuss {service.title} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
