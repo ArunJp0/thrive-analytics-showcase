@@ -37,7 +37,7 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="animate-fade-up-delay-2 lg:col-span-6">
+        <div className="animate-fade-up-delay-2 hidden md:block lg:col-span-6">
           <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
             <img
               src={heroCorporate}
