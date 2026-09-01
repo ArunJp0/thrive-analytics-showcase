@@ -111,7 +111,9 @@ const Contact = () => {
               <ul className="space-y-5 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 text-primary shrink-0" />
-                  info@thriveanalytics.co.uk
+                  <a href="mailto:info@thriveanalytics.co.uk" className="text-current no-underline">
+                    info@thriveanalytics.co.uk
+                  </a>
                 </li>
               </ul>
             </div>
