@@ -45,7 +45,7 @@ const Footer = () => {
             <div>
               <h4 className="mb-5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-white/45">Contact</h4>
               <ul className="space-y-2.5 text-[0.9375rem] text-white/60">
-                <li>info@thriveanalytics.co.uk</li>
+                <li><a href="mailto:info@thriveanalytics.co.uk" className="hover:text-white transition-colors">info@thriveanalytics.co.uk</a></li>
               </ul>
             </div>
           </div>
