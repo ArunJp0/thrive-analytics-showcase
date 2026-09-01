@@ -37,9 +37,19 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
-          <Link to="/contact" className="ml-3">
-            <Button size="sm" className="btn-hover-glow">Book a Consultation</Button>
-          </Link>
+          {location.pathname === "/contact" ? (
+            <Button
+              size="sm"
+              className="btn-hover-glow ml-3"
+              onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Book a Consultation
+            </Button>
+          ) : (
+            <Link to="/contact" className="ml-3">
+              <Button size="sm" className="btn-hover-glow">Book a Consultation</Button>
+            </Link>
+          )}
         </nav>
 
         {/* Mobile toggle */}
@@ -69,9 +79,22 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
-          <Link to="/contact" onClick={() => setMobileOpen(false)} className="mt-2 block">
-            <Button className="w-full btn-hover-glow" size="sm">Book a Consultation</Button>
-          </Link>
+          {location.pathname === "/contact" ? (
+            <Button
+              className="mt-2 w-full btn-hover-glow"
+              size="sm"
+              onClick={() => {
+                setMobileOpen(false);
+                document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Book a Consultation
+            </Button>
+          ) : (
+            <Link to="/contact" onClick={() => setMobileOpen(false)} className="mt-2 block">
+              <Button className="w-full btn-hover-glow" size="sm">Book a Consultation</Button>
+            </Link>
+          )}
         </nav>
       )}
     </header>
