@@ -11,15 +11,65 @@ import { MultiSelect } from "@/components/ui/multi-select";
 import EmailLink from "@/components/EmailLink";
 
 
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  company: "",
+  otherRequirement: "",
+  message: "",
+};
+
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+    .join("&");
+
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [values, setValues] = useState(initialValues);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    toast.success("Thank you! We'll be in touch shortly.");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          "bot-field": "",
+          ...values,
+          services: selectedServices.join(", "),
+        }),
+      });
+
+      if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+      setSubmitted(true);
+      toast.success("Thank you! Your message has been sent successfully. We'll get back to you shortly.");
+
+      setTimeout(() => {
+        setValues(initialValues);
+        setSelectedServices([]);
+        setSubmitted(false);
+      }, 2500);
+    } catch {
+      toast.error("Something went wrong while sending your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
 
 
   const serviceOptions = [...services.map((s) => s.title), "Other"];
@@ -55,25 +105,40 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
+              <form
+                id="contact-form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">First Name</label>
-                    <Input placeholder="James" required className="h-12" />
+                    <Input name="firstName" value={values.firstName} onChange={handleChange} placeholder="James" required className="h-12" />
                   </div>
                   <div>
                     <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">Last Name</label>
-                    <Input placeholder="Robertson" required className="h-12" />
+                    <Input name="lastName" value={values.lastName} onChange={handleChange} placeholder="Robertson" required className="h-12" />
                   </div>
                 </div>
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">Work Email</label>
-                  <Input type="email" placeholder="james@company.co.uk" required className="h-12" />
+                  <Input name="email" type="email" value={values.email} onChange={handleChange} placeholder="james@company.co.uk" required className="h-12" />
                 </div>
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">Company</label>
-                  <Input placeholder="Your company name" className="h-12" />
+                  <Input name="company" value={values.company} onChange={handleChange} placeholder="Your company name" className="h-12" />
                 </div>
+
 
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">
@@ -92,16 +157,16 @@ const Contact = () => {
                     <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">
                       Please Describe Your Requirement
                     </label>
-                    <Textarea placeholder="Tell us what you're looking for..." rows={4} />
+                    <Textarea name="otherRequirement" value={values.otherRequirement} onChange={handleChange} placeholder="Tell us what you're looking for..." rows={4} />
                   </div>
                 )}
 
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">How can we help?</label>
-                  <Textarea placeholder="Tell us about your project or challenge..." rows={5} required />
+                  <Textarea name="message" value={values.message} onChange={handleChange} placeholder="Tell us about your project or challenge..." rows={5} required />
                 </div>
-                <Button type="submit" size="lg" className="w-full sm:w-auto btn-hover-glow">
-                  Send Message
+                <Button type="submit" size="lg" disabled={submitting} className="w-full sm:w-auto btn-hover-glow">
+                  {submitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             )}
