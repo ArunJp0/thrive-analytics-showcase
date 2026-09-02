@@ -8,6 +8,8 @@ import { toast } from "sonner";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { services } from "@/data/services";
 import { MultiSelect } from "@/components/ui/multi-select";
+import EmailLink from "@/components/EmailLink";
+
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -111,13 +113,8 @@ const Contact = () => {
               <ul className="space-y-5 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 text-primary shrink-0" />
-                  <a
-                    href="mailto:info@thriveanalytics.co.uk"
-                    rel="noopener"
-                    className="relative z-10 inline-block break-all text-current no-underline [pointer-events:auto]"
-                  >
-                    info@thriveanalytics.co.uk
-                  </a>
+                  <EmailLink className="relative z-10 inline-block break-all text-current no-underline [pointer-events:auto]" />
+
                 </li>
               </ul>
             </div>
