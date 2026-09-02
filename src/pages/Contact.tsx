@@ -105,25 +105,40 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
+              <form
+                id="contact-form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">First Name</label>
-                    <Input placeholder="James" required className="h-12" />
+                    <Input name="firstName" value={values.firstName} onChange={handleChange} placeholder="James" required className="h-12" />
                   </div>
                   <div>
                     <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">Last Name</label>
-                    <Input placeholder="Robertson" required className="h-12" />
+                    <Input name="lastName" value={values.lastName} onChange={handleChange} placeholder="Robertson" required className="h-12" />
                   </div>
                 </div>
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">Work Email</label>
-                  <Input type="email" placeholder="james@company.co.uk" required className="h-12" />
+                  <Input name="email" type="email" value={values.email} onChange={handleChange} placeholder="james@company.co.uk" required className="h-12" />
                 </div>
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">Company</label>
-                  <Input placeholder="Your company name" className="h-12" />
+                  <Input name="company" value={values.company} onChange={handleChange} placeholder="Your company name" className="h-12" />
                 </div>
+
 
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">
