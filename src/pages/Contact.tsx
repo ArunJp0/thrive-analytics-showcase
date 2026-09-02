@@ -11,15 +11,65 @@ import { MultiSelect } from "@/components/ui/multi-select";
 import EmailLink from "@/components/EmailLink";
 
 
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  company: "",
+  otherRequirement: "",
+  message: "",
+};
+
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+    .join("&");
+
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [values, setValues] = useState(initialValues);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    toast.success("Thank you! We'll be in touch shortly.");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          "bot-field": "",
+          ...values,
+          services: selectedServices.join(", "),
+        }),
+      });
+
+      if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+      setSubmitted(true);
+      toast.success("Thank you! Your message has been sent successfully. We'll get back to you shortly.");
+
+      setTimeout(() => {
+        setValues(initialValues);
+        setSelectedServices([]);
+        setSubmitted(false);
+      }, 2500);
+    } catch {
+      toast.error("Something went wrong while sending your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
 
 
   const serviceOptions = [...services.map((s) => s.title), "Other"];
