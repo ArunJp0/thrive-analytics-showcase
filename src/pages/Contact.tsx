@@ -157,16 +157,16 @@ const Contact = () => {
                     <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">
                       Please Describe Your Requirement
                     </label>
-                    <Textarea placeholder="Tell us what you're looking for..." rows={4} />
+                    <Textarea name="otherRequirement" value={values.otherRequirement} onChange={handleChange} placeholder="Tell us what you're looking for..." rows={4} />
                   </div>
                 )}
 
                 <div>
                   <label className="mb-2 block text-[0.9375rem] font-medium text-foreground">How can we help?</label>
-                  <Textarea placeholder="Tell us about your project or challenge..." rows={5} required />
+                  <Textarea name="message" value={values.message} onChange={handleChange} placeholder="Tell us about your project or challenge..." rows={5} required />
                 </div>
-                <Button type="submit" size="lg" className="w-full sm:w-auto btn-hover-glow">
-                  Send Message
+                <Button type="submit" size="lg" disabled={submitting} className="w-full sm:w-auto btn-hover-glow">
+                  {submitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             )}
