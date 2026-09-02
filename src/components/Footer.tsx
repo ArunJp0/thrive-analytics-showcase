@@ -13,8 +13,11 @@ const Footer = () => {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="mb-5">
-                <img src={logoWhite} alt="Thrive Analytics" className="h-12 w-auto lg:h-14" />
+                <Link to="/" aria-label="Thrive Analytics home" className="inline-block">
+                  <img src={logoWhite} alt="Thrive Analytics" className="h-12 w-auto lg:h-14" />
+                </Link>
               </div>
+
               <p className="text-[0.9375rem] text-white/55 leading-relaxed">
                 Data-driven IT services for forward-thinking businesses across the United Kingdom.
               </p>
