@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import TrustedBySection from "@/components/home/TrustedBySection";
@@ -8,7 +9,12 @@ import CaseStudiesPreview from "@/components/home/CaseStudiesPreview";
 import CTASection from "@/components/home/CTASection";
 
 const Index = () => (
-  <Layout>
+  <>
+    <Helmet>
+      <title>Thrive Analytics Ltd | Data & Analytics UK</title>
+      <meta name="description" content="Thrive Analytics Ltd helps UK businesses turn data into insight with data engineering, analytics, visualisation, data science and bespoke applications." />
+    </Helmet>
+    <Layout>
     <HeroSection />
     <TrustedBySection />
     <ServicesOverview />
@@ -17,6 +23,7 @@ const Index = () => (
     <CaseStudiesPreview />
     <CTASection />
   </Layout>
+  </>
 );
 
 export default Index;
