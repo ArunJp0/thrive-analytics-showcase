@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { services } from "@/data/services";
@@ -7,7 +8,12 @@ import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const Services = () => (
-  <Layout>
+  <>
+    <Helmet>
+      <title>Data & IT Services | Thrive Analytics Ltd</title>
+      <meta name="description" content="Explore data engineering, analysis, visualisation, data science, business intelligence and bespoke app development for UK businesses." />
+    </Helmet>
+    <Layout>
     <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
       <div className="container-narrow text-center">
         <ScrollReveal>
@@ -59,6 +65,7 @@ const Services = () => (
       </section>
     ))}
   </Layout>
+  </>
 );
 
 export default Services;
