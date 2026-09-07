@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { caseStudies } from "@/data/caseStudies";
 import { Link } from "react-router-dom";
@@ -6,7 +7,12 @@ import { ArrowRight } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/motion/ScrollReveal";
 
 const CaseStudies = () => (
-  <Layout>
+  <>
+    <Helmet>
+      <title>Data & Technology Case Studies | Thrive Analytics</title>
+      <meta name="description" content="Explore Thrive Analytics case studies and see how data engineering, analytics, visualisation and bespoke technology solutions deliver business value." />
+    </Helmet>
+    <Layout>
     <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
       <div className="container-narrow text-center">
         <ScrollReveal>
@@ -70,6 +76,7 @@ const CaseStudies = () => (
       </ScrollReveal>
     </section>
   </Layout>
+  </>
 );
 
 export default CaseStudies;
