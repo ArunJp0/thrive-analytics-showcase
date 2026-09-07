@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -76,7 +77,12 @@ const Contact = () => {
   const showOtherTextarea = selectedServices.includes("Other");
 
   return (
-    <Layout>
+    <>
+      <Helmet>
+        <title>Contact Thrive Analytics Ltd | UK Data & IT</title>
+        <meta name="description" content="Contact Thrive Analytics Ltd to discuss data engineering, analytics, visualisation, data science, business intelligence or bespoke app development." />
+      </Helmet>
+      <Layout>
       <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
         <div className="container-narrow text-center">
           <ScrollReveal>
@@ -193,6 +199,7 @@ const Contact = () => {
         </div>
       </section>
     </Layout>
+    </>
   );
 };
 
