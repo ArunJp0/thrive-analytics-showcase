@@ -12,6 +12,7 @@ const Services = () => (
     <Helmet>
       <title>Data & IT Services | Thrive Analytics Ltd</title>
       <meta name="description" content="Explore data engineering, analysis, visualisation, data science, business intelligence and bespoke app development for UK businesses." />
+      <link rel="canonical" href="https://thriveanalytics.co.uk/services" />
     </Helmet>
     <Layout>
     <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">

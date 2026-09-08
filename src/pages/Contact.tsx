@@ -81,6 +81,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact Thrive Analytics Ltd | UK Data & IT</title>
         <meta name="description" content="Contact Thrive Analytics Ltd to discuss data engineering, analytics, visualisation, data science, business intelligence or bespoke app development." />
+        <link rel="canonical" href="https://thriveanalytics.co.uk/contact" />
       </Helmet>
       <Layout>
       <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">

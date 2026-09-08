@@ -30,6 +30,7 @@ const About = () => (
     <Helmet>
       <title>About Thrive Analytics Ltd | UK Data Consultancy</title>
       <meta name="description" content="Learn about Thrive Analytics Ltd, a UK data and technology consultancy helping businesses use data, analytics and bespoke technology to grow." />
+      <link rel="canonical" href="https://thriveanalytics.co.uk/about" />
     </Helmet>
     <Layout>
     <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
