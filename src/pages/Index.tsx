@@ -13,6 +13,7 @@ const Index = () => (
     <Helmet>
       <title>Thrive Analytics Ltd | Data & Analytics UK</title>
       <meta name="description" content="Thrive Analytics Ltd helps UK businesses turn data into insight with data engineering, analytics, visualisation, data science and bespoke applications." />
+      <link rel="canonical" href="https://thriveanalytics.co.uk/" />
     </Helmet>
     <Layout>
     <HeroSection />
