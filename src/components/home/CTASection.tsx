@@ -27,6 +27,14 @@ const CTASection = () => (
             </Button>
           </Link>
         </div>
+        <div className="mt-6 flex justify-center">
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/65 transition-colors hover:text-white"
+          >
+            Learn More About Us <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </ScrollReveal>
     </div>
   </section>

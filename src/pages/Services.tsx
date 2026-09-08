@@ -28,6 +28,14 @@ const Services = () => (
           <p className="text-lead mx-auto mt-5 max-w-2xl text-white/65">
             We partner with businesses across the UK to design, build, and optimise data-driven solutions that deliver real, measurable impact.
           </p>
+          <div className="mt-5 flex justify-center">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/65 transition-colors hover:text-white"
+            >
+              Learn More About Us <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </ScrollReveal>
       </div>
     </section>

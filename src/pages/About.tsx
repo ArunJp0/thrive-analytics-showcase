@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import { Target, Eye, Heart, Users } from "lucide-react";
+import { Target, Eye, Heart, Users, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -92,21 +93,29 @@ const About = () => (
           />
         </ScrollReveal>
         <StaggerContainer className="grid gap-5 sm:grid-cols-3 lg:gap-6" staggerDelay={0.12}>
-          {[
-            { title: "Collaborative Approach", text: "We embed ourselves within your teams, ensuring knowledge transfer and long-term capability building alongside immediate project delivery." },
-            { title: "Continuous Innovation", text: "We invest in our team's development and stay at the forefront of data technologies, so you always benefit from the latest thinking." },
-            { title: "Client-First Mindset", text: "Your success is our success. We measure our performance by the tangible business outcomes we deliver, not just the technology we implement." },
-          ].map((item) => (
-            <StaggerItem key={item.title}>
-              <div className="card-pro h-full">
-                <h3 className="mb-3 h3-card font-semibold text-card-foreground">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.text}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+        {[
+          { title: "Collaborative Approach", text: "We embed ourselves within your teams, ensuring knowledge transfer and long-term capability building alongside immediate project delivery." },
+          { title: "Continuous Innovation", text: "We invest in our team's development and stay at the forefront of data technologies, so you always benefit from the latest thinking." },
+          { title: "Client-First Mindset", text: "Your success is our success. We measure our performance by the tangible business outcomes we deliver, not just the technology we implement." },
+        ].map((item) => (
+          <StaggerItem key={item.title}>
+            <div className="card-pro h-full">
+              <h3 className="mb-3 h3-card font-semibold text-card-foreground">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{item.text}</p>
+            </div>
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
+      <div className="mt-10 flex justify-center">
+        <Link
+          to="/case-studies"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+        >
+          Explore Our Case Studies <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section className="section-padding overflow-x-clip bg-background">
       <div className="container-narrow">
@@ -129,6 +138,14 @@ const About = () => (
             </StaggerItem>
           ))}
         </StaggerContainer>
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+          >
+            Explore Our Services <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
 
@@ -156,6 +173,14 @@ const About = () => (
               </ScrollReveal>
             ))}
           </Accordion>
+          <div className="mt-8 flex justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+            >
+              Contact Thrive Analytics <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
