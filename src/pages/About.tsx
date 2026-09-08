@@ -138,6 +138,14 @@ const About = () => (
             </StaggerItem>
           ))}
         </StaggerContainer>
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+          >
+            Explore Our Services <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
 
