@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Thrive Analytics Ltd | UK Data & IT"
+        title="Contact Thrive Analytics Ltd | Peterborough UK"
         description="Contact Thrive Analytics Ltd to discuss data engineering, analytics, visualisation, data science, business intelligence or bespoke app development."
         path="/contact"
       />
