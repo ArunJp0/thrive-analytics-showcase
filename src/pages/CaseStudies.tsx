@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Layout from "@/components/Layout";
 import { caseStudies } from "@/data/caseStudies";
 import { Link } from "react-router-dom";
@@ -8,11 +8,11 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/motion
 
 const CaseStudies = () => (
   <>
-    <Helmet>
-      <title>Data & Technology Case Studies | Thrive Analytics</title>
-      <meta name="description" content="Explore Thrive Analytics case studies and see how data engineering, analytics, visualisation and bespoke technology solutions deliver business value." />
-      <link rel="canonical" href="https://thriveanalytics.co.uk/case-studies" />
-    </Helmet>
+    <SEOHead
+      title="Data & Technology Case Studies | Thrive Analytics"
+      description="Explore Thrive Analytics case studies and see how data engineering, analytics, visualisation and bespoke technology solutions deliver business value."
+      path="/case-studies"
+    />
     <Layout>
     <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
       <div className="container-narrow text-center">

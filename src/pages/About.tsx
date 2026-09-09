@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
@@ -28,11 +28,11 @@ const faqs = [
 
 const About = () => (
   <>
-    <Helmet>
-      <title>About Thrive Analytics Ltd | UK Data Consultancy</title>
-      <meta name="description" content="Learn about Thrive Analytics Ltd, a UK data and technology consultancy helping businesses use data, analytics and bespoke technology to grow." />
-      <link rel="canonical" href="https://thriveanalytics.co.uk/about" />
-    </Helmet>
+    <SEOHead
+      title="About Thrive Analytics Ltd | UK Data Consultancy"
+      description="Learn about Thrive Analytics Ltd, a UK data and technology consultancy helping businesses use data, analytics and bespoke technology to grow."
+      path="/about"
+    />
     <Layout>
     <section className="relative overflow-hidden border-b border-white/10 bg-navy py-16 sm:py-20 lg:py-24">
       <div className="container-narrow text-center">
