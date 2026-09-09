@@ -71,6 +71,16 @@ const Services = () => (
             </ScrollReveal>
           </div>
         </div>
+        {i === services.length - 1 && (
+          <div className="container-narrow mt-12 text-center md:mt-14">
+            <Link
+              to="/case-studies"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-foreground"
+            >
+              Explore Our Case Studies <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        )}
       </section>
     ))}
   </Layout>
