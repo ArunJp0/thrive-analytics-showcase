@@ -3,7 +3,8 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "sonner";
 import ScrollReveal from "@/components/motion/ScrollReveal";
@@ -177,6 +178,20 @@ const Contact = () => {
                 </Button>
               </form>
             )}
+            <div className="mt-8 flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:gap-5">
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-1.5 font-semibold text-primary transition-colors hover:text-foreground"
+              >
+                Explore Our Services <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="inline-flex items-center gap-1.5 font-semibold text-primary transition-colors hover:text-foreground"
+              >
+                Explore Our Case Studies <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </ScrollReveal>
 
           <ScrollReveal direction="right" className="space-y-6 lg:col-span-2">
