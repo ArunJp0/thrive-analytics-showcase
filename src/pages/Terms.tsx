@@ -33,7 +33,7 @@ const Terms = () => (
           </div>
           <div>
             <h2 className="mb-3 text-xl font-bold text-foreground">6. Contact</h2>
-            <p>For questions regarding these terms, contact us at legal@thriveanalytics.co.uk or write to 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ.</p>
+            <p>For questions regarding these terms, contact us at info@thriveanalytics.co.uk or write to 2 Brickton Road, Peterborough, England, PE7 8HS.</p>
           </div>
         </div>
       </div>

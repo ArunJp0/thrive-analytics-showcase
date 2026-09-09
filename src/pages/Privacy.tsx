@@ -29,11 +29,11 @@ const Privacy = () => (
           </div>
           <div>
             <h2 className="mb-3 text-xl font-bold text-foreground">5. Your Rights</h2>
-            <p>Under UK GDPR, you have the right to access, rectify, erase, restrict, and port your personal data. You may also withdraw consent at any time. To exercise these rights, contact us at privacy@thriveanalytics.co.uk.</p>
+            <p>Under UK GDPR, you have the right to access, rectify, erase, restrict, and port your personal data. You may also withdraw consent at any time. To exercise these rights, contact us at info@thriveanalytics.co.uk.</p>
           </div>
           <div>
             <h2 className="mb-3 text-xl font-bold text-foreground">6. Contact</h2>
-            <p>For data protection queries, contact our Data Protection Officer at privacy@thriveanalytics.co.uk or write to us at 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ.</p>
+            <p>For data protection queries, contact our Data Protection Officer at info@thriveanalytics.co.uk or write to us at 2 Brickton Road, Peterborough, England, PE7 8HS.</p>
           </div>
         </div>
       </div>
