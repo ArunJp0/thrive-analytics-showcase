@@ -6,7 +6,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 
 interface LegalModalProps {
   open: boolean;
@@ -39,17 +39,15 @@ const LegalModal = ({ open, onOpenChange, type }: LegalModalProps) => {
   return (
     <>
       {open && (
-        <Helmet>
-          <title>{isPrivacy ? "Privacy Policy | Thrive Analytics Ltd" : "Terms & Conditions | Thrive Analytics Ltd"}</title>
-          <meta
-            name="description"
-            content={
-              isPrivacy
-                ? "Read the Privacy Policy for Thrive Analytics Ltd and learn how we collect, use, protect and manage personal information on our website."
-                : "Read the Terms & Conditions for using the Thrive Analytics Ltd website, including information about website use, content and responsibilities."
-            }
-          />
-        </Helmet>
+        <SEOHead
+          title={isPrivacy ? "Privacy Policy | Thrive Analytics Ltd" : "Terms & Conditions | Thrive Analytics Ltd"}
+          description={
+            isPrivacy
+              ? "Read the Privacy Policy for Thrive Analytics Ltd and learn how we collect, use, protect and manage personal information on our website."
+              : "Read the Terms & Conditions for using the Thrive Analytics Ltd website, including information about website use, content and responsibilities."
+          }
+          path={isPrivacy ? "/privacy-policy" : "/terms-and-conditions"}
+        />
       )}
       <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl max-h-[85vh] p-0">
