@@ -41,7 +41,7 @@ const HeroSection = () => (
           <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
             <img
               src={heroCorporate}
-              alt="Professional data analytics team collaborating in a modern office"
+              alt="Data analytics team working in a control room with dashboard displays"
               className="h-auto w-full object-contain"
               width={1024}
               height={768}
