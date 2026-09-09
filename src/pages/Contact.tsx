@@ -199,7 +199,7 @@ const Contact = () => {
               <h3 className="h3-card mb-5 font-semibold text-card-foreground">Contact Details</h3>
               <ul className="space-y-5 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-5 w-5 text-primary shrink-0" />
+                  <Mail aria-hidden="true" className="mt-0.5 h-5 w-5 text-primary shrink-0" />
                   <EmailLink className="relative z-10 inline-block break-all text-current no-underline [pointer-events:auto]" />
 
                 </li>

@@ -16,7 +16,7 @@ const Footer = () => {
             <div>
               <div className="mb-5">
                 <Link to="/" aria-label="Thrive Analytics home" className="inline-block">
-                  <img src={logoWhite} alt="Thrive Analytics" className="h-12 w-auto lg:h-14" />
+                  <img src={logoWhite} alt="Thrive Analytics Ltd" className="h-12 w-auto lg:h-14" />
                 </Link>
               </div>
 
