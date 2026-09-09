@@ -29,8 +29,8 @@ const faqs = [
 const About = () => (
   <>
     <SEOHead
-      title="About Thrive Analytics Ltd | UK Data Consultancy"
-      description="Learn about Thrive Analytics Ltd, a UK data and technology consultancy helping businesses use data, analytics and bespoke technology to grow."
+      title="About Thrive Analytics Ltd | Peterborough UK"
+      description="Learn about Thrive Analytics Ltd, helping businesses in Peterborough and across the UK use data, analytics and bespoke technology to grow."
       path="/about"
     />
     <Layout>

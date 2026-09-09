@@ -11,8 +11,8 @@ import CTASection from "@/components/home/CTASection";
 const Index = () => (
   <>
     <SEOHead
-      title="Thrive Analytics Ltd | Data & Analytics UK"
-      description="Thrive Analytics Ltd helps UK businesses turn data into insight with data engineering, analytics, visualisation, data science and bespoke applications."
+      title="Thrive Analytics Ltd | Data & Analytics Peterborough UK"
+      description="Thrive Analytics Ltd helps businesses in Peterborough and across the UK turn data into insight with analytics, engineering, visualisation and bespoke technology."
       path="/"
     />
     <Layout>

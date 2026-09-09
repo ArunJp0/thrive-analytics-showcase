@@ -10,8 +10,8 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 const Services = () => (
   <>
     <SEOHead
-      title="Data & IT Services | Thrive Analytics Ltd"
-      description="Explore data engineering, analysis, visualisation, data science, business intelligence and bespoke app development for UK businesses."
+      title="Data & IT Services | Peterborough & UK"
+      description="Explore data engineering, analysis, visualisation, data science, business intelligence and bespoke app development for Peterborough and UK businesses."
       path="/services"
     />
     <Layout>
