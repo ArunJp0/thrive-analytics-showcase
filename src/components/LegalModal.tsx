@@ -19,8 +19,8 @@ const privacyContent = [
   { title: "2. Information We Collect", text: "We may collect: your name, email address, phone number, company name, and any information you provide through our contact forms or when engaging with our services. We also collect technical data such as IP addresses, browser types, and usage data through cookies and analytics tools." },
   { title: "3. How We Use Your Information", text: "We use your data to respond to enquiries, deliver our services, improve our website, send relevant communications (with your consent), and comply with legal obligations. We will never sell your personal data to third parties." },
   { title: "4. Data Retention", text: "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy, or as required by law. Contact form submissions are retained for 24 months unless otherwise agreed." },
-  { title: "5. Your Rights", text: "Under UK GDPR, you have the right to access, rectify, erase, restrict, and port your personal data. You may also withdraw consent at any time. To exercise these rights, contact us at privacy@thriveanalytics.co.uk." },
-  { title: "6. Contact", text: "For data protection queries, contact our Data Protection Officer at privacy@thriveanalytics.co.uk or write to us at 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ." },
+  { title: "5. Your Rights", text: "Under UK GDPR, you have the right to access, rectify, erase, restrict, and port your personal data. You may also withdraw consent at any time. To exercise these rights, contact us at info@thriveanalytics.co.uk." },
+  { title: "6. Contact", text: "For data protection queries, contact our Data Protection Officer at info@thriveanalytics.co.uk or write to us at 2 Brickton Road, Peterborough, England, PE7 8HS." },
 ];
 
 const termsContent = [
@@ -29,7 +29,7 @@ const termsContent = [
   { title: "3. Intellectual Property", text: "All content on this website, including text, graphics, logos, and software, is the property of Thrive Analytics Ltd and is protected by UK intellectual property laws. You may not reproduce, distribute, or modify any content without our prior written consent." },
   { title: "4. Limitation of Liability", text: "Thrive Analytics Ltd shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or services, except where such liability cannot be excluded by law." },
   { title: "5. Governing Law", text: "These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales." },
-  { title: "6. Contact", text: "For questions regarding these terms, contact us at legal@thriveanalytics.co.uk or write to 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ." },
+  { title: "6. Contact", text: "For questions regarding these terms, contact us at info@thriveanalytics.co.uk or write to 2 Brickton Road, Peterborough, England, PE7 8HS." },
 ];
 
 const LegalModal = ({ open, onOpenChange, type }: LegalModalProps) => {
