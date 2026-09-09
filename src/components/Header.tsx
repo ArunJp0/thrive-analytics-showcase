@@ -19,7 +19,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-xl">
       <div className="container-narrow flex h-[68px] lg:h-[76px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logoColored} alt="Thrive Analytics" className="h-8 w-auto sm:h-9 lg:h-10" />
+          <img src={logoColored} alt="Thrive Analytics Ltd" className="h-8 w-auto sm:h-9 lg:h-10" />
         </Link>
 
         {/* Desktop nav */}
