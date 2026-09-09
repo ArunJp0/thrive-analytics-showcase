@@ -67,12 +67,27 @@ const CaseStudies = () => (
       </StaggerContainer>
 
       <ScrollReveal delay={0.2}>
-        <div className="container-narrow mt-12 text-center lg:mt-14">
+        <div className="container-narrow mt-12 flex flex-col items-center gap-4 text-center lg:mt-14">
           <Link to="/contact">
             <Button size="lg" className="btn-hover-glow">
               Discuss Your Project <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
+          <div className="flex flex-col items-center gap-2 text-sm sm:flex-row sm:gap-4">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-1.5 font-semibold text-primary transition-colors hover:text-foreground"
+            >
+              Explore Our Services <ArrowRight className="h-4 w-4" />
+            </Link>
+            <span className="hidden h-4 w-px bg-border sm:block" />
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-1.5 font-semibold text-primary transition-colors hover:text-foreground"
+            >
+              Learn More About Us <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </ScrollReveal>
     </section>
