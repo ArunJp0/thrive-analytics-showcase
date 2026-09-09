@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import TrustedBySection from "@/components/home/TrustedBySection";
@@ -10,11 +10,11 @@ import CTASection from "@/components/home/CTASection";
 
 const Index = () => (
   <>
-    <Helmet>
-      <title>Thrive Analytics Ltd | Data & Analytics UK</title>
-      <meta name="description" content="Thrive Analytics Ltd helps UK businesses turn data into insight with data engineering, analytics, visualisation, data science and bespoke applications." />
-      <link rel="canonical" href="https://thriveanalytics.co.uk/" />
-    </Helmet>
+    <SEOHead
+      title="Thrive Analytics Ltd | Data & Analytics UK"
+      description="Thrive Analytics Ltd helps UK businesses turn data into insight with data engineering, analytics, visualisation, data science and bespoke applications."
+      path="/"
+    />
     <Layout>
     <HeroSection />
     <TrustedBySection />
